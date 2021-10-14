@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dendi Ramadani(175410068)</title>
+    </head>
+    <body>
+
+        <canvas id="myCanvas" width="1200" height="800" style="border:1px solid #000000;">
+        </canvas>
+
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+
+            ctx.fillStyle="green"; //warna gambar pola
+            ctx.fillRect(0,0,150,100) //lokasi dan ukuran gambar pola
+            ctx.save();
+			ctx.translate(100, 100); //titik lokasi awal translasi
+			ctx.scale(2, 2); //ukuran skala
+			ctx.fillStyle="yellow";
+			ctx.fillRect(50, 0, 150, 100);
+			ctx.restore();
+            ctx.save();
+			ctx.translate(100, 100);
+			ctx.fillStyle="blue";
+			ctx.fillRect(150, 50, 150, 100);
+			ctx.restore();
+			ctx.save();
+			ctx.translate(100, 100);
+			ctx.rotate(Math.PI/4); // Rotasi 45 derajat
+			ctx.fillStyle="red";
+			ctx.fillRect(150,-100, 150, 100); 
+			ctx.restore();
+			
+
+        </script>
+
+    </body>
+</html>
